@@ -39,6 +39,6 @@ public class RedState : State
 
     private void SetRandomRedTime()
     {
-        redTime = Random.Range(5, 10);
+        redTime = Random.Range(5, 11);
     }
 }

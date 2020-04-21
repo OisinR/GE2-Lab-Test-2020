@@ -41,6 +41,6 @@ public class GreenState : State
 
     private void SetRandomGreenTime()
     {
-        greenTime = Random.Range(5, 10);
+        greenTime = Random.Range(5, 11);
     }
 }
