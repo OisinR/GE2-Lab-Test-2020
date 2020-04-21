@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GreenState : State
 {
-
     
+
     protected bool isGreenTimeOver;
     protected float greenTime;
 
@@ -16,7 +16,8 @@ public class GreenState : State
     public override void Enter()
     {
         base.Enter();
-
+        
+        
         isGreenTimeOver = false;
         SetRandomGreenTime();
     }
@@ -34,6 +35,7 @@ public class GreenState : State
         if (Time.time >= startTime + greenTime)
         {
             isGreenTimeOver = true;
+            
         }
     }
 

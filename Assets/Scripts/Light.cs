@@ -5,19 +5,21 @@ using UnityEngine;
 public class Light : Entity
 {
 
-    public GreenState greenState { get; private set; }
-    public YellowState yellowState { get; private set; }
-    public RedState redState { get; private set; }
+    public TR_GreenState greenState { get; private set; }
+    public TR_YellowState yellowState { get; private set; }
+    public TR_RedState redState { get; private set; }
 
-   
+    public Renderer rendererL;
 
     public override void Start()
     {
         base.Start();
 
-        greenState = new GreenState(this, stateMachine);
-        yellowState = new YellowState(this, stateMachine);
-        redState = new RedState(this, stateMachine);
+        rendererL = GetComponent<Renderer>();
+
+        greenState = new TR_GreenState(this, stateMachine, this);
+        yellowState = new TR_YellowState(this, stateMachine, this);
+        redState = new TR_RedState(this, stateMachine, this);
 
         RandomiseAtStart();
     }

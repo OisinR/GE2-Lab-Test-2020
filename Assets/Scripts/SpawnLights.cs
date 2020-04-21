@@ -19,22 +19,14 @@ public class SpawnLights : MonoBehaviour
             Quaternion q = Quaternion.AngleAxis(theta * i * Mathf.Rad2Deg, Vector3.up);
             q = transform.rotation * q;
 
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-            cube.transform.SetPositionAndRotation(p, q);
-            cube.transform.parent = this.transform;
-            cube.GetComponent<Renderer>().material.color = Color.yellow;
-            elements.Add(cube);
+            GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            cylinder.transform.SetPositionAndRotation(p, q);
+            cylinder.transform.parent = this.transform;
+            cylinder.GetComponent<Renderer>().material.color = Color.yellow;
+            cylinder.AddComponent<Light>();
+            elements.Add(cylinder);
         }
     }
-
-
-
-
-	private void Update()
-    {
-        
-    }
-
 
 
 }

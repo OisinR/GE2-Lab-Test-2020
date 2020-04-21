@@ -6,8 +6,8 @@ public class YellowState : State
 {
 
 
-    protected bool isGreenTimeOver;
-    protected float greenTime;
+    protected bool isYellowTimeOver;
+    protected float yellowTime;
 
     public YellowState(Entity entity, FiniteStateMachine stateMachine) : base(entity, stateMachine)
     {
@@ -17,8 +17,8 @@ public class YellowState : State
     {
         base.Enter();
 
-        isGreenTimeOver = false;
-        SetRandomGreenTime();
+        isYellowTimeOver = false;
+        yellowTime = 4;
     }
 
     public override void Exit()
@@ -31,14 +31,10 @@ public class YellowState : State
     {
         base.LogicUpdate();
 
-        if (Time.time >= startTime + greenTime)
+        if (Time.time >= startTime + yellowTime)
         {
-            isGreenTimeOver = true;
+            isYellowTimeOver = true;
         }
     }
 
-    private void SetRandomGreenTime()
-    {
-        greenTime = Random.Range(5, 10);
-    }
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     public FiniteStateMachine stateMachine;
-    protected Color[] colours = { Color.red, Color.yellow, Color.green };
+    
 
     public virtual void Start()
     {
-        
 
+        
         stateMachine = new FiniteStateMachine();
     }
 

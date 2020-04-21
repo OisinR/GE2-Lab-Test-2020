@@ -6,8 +6,8 @@ public class RedState : State
 {
 
 
-    protected bool isGreenTimeOver;
-    protected float greenTime;
+    protected bool isRedTimeOver;
+    protected float redTime;
 
     public RedState(Entity entity, FiniteStateMachine stateMachine) : base(entity, stateMachine)
     {
@@ -17,8 +17,8 @@ public class RedState : State
     {
         base.Enter();
 
-        isGreenTimeOver = false;
-        SetRandomGreenTime();
+        isRedTimeOver = false;
+        SetRandomRedTime();
     }
 
     public override void Exit()
@@ -31,14 +31,14 @@ public class RedState : State
     {
         base.LogicUpdate();
 
-        if (Time.time >= startTime + greenTime)
+        if (Time.time >= startTime + redTime)
         {
-            isGreenTimeOver = true;
+            isRedTimeOver = true;
         }
     }
 
-    private void SetRandomGreenTime()
+    private void SetRandomRedTime()
     {
-        greenTime = Random.Range(5, 10);
+        redTime = Random.Range(5, 10);
     }
 }
