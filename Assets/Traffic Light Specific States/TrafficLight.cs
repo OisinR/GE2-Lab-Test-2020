@@ -10,6 +10,7 @@ public class TrafficLight : Light
     public TR_RedState redState { get; private set; }
 
     public Renderer rendererL;
+   
 
     public override void Start()
     {
