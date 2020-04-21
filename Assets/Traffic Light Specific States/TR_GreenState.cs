@@ -10,8 +10,7 @@ public class TR_GreenState : GreenState
 
     public TR_GreenState(Light light, FiniteStateMachine stateMachine, TrafficLight trafficLight) : base(light, stateMachine)
     {
-        this.trafficLight = trafficLight;
-        
+        this.trafficLight = trafficLight;       
     }
 
     public override void Enter()
