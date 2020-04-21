@@ -13,14 +13,6 @@ public class LightController : MonoBehaviour
         RandomiseLightsAtStart();
     }
 
-
-
-
-	private void Update()
-    {
-        
-    }
-
     void RandomiseLightsAtStart()
     {
         foreach (GameObject g in elements)
