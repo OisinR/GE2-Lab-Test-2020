@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnLights : MonoBehaviour
 {
-    public float radius = 20;
-    public float noOfLights;
-    List<GameObject> elements = new List<GameObject>();
+    float radius = 10;
+    float noOfLights = 10;
+    public List<GameObject> elements = new List<GameObject>();
 
 
-    void Start()
+    void Awake()
     {
         float theta = Mathf.PI * 2.0f / noOfLights;
         for (int i = 0; i < noOfLights; i++)
