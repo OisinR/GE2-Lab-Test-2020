@@ -9,7 +9,7 @@ public class YellowState : State
     protected bool isYellowTimeOver;
     protected float yellowTime;
 
-    public YellowState(Entity entity, FiniteStateMachine stateMachine) : base(entity, stateMachine)
+    public YellowState(Light light, FiniteStateMachine stateMachine) : base(light, stateMachine)
     {
     }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class Light : MonoBehaviour
 {
     public FiniteStateMachine stateMachine;
     

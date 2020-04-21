@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TR_YellowState : YellowState
 {
-    private Light trafficLight;
+    private TrafficLight trafficLight;
 
-    public TR_YellowState(Entity entity, FiniteStateMachine stateMachine, Light trafficLight) : base(entity, stateMachine)
+    public TR_YellowState(Light light, FiniteStateMachine stateMachine, TrafficLight trafficLight) : base(light, stateMachine)
     {
         this.trafficLight = trafficLight;
     }

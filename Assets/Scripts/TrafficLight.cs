@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Light : Entity
+public class TrafficLight : Light
 {
 
     public TR_GreenState greenState { get; private set; }

@@ -23,7 +23,7 @@ public class SpawnLights : MonoBehaviour
             cylinder.transform.SetPositionAndRotation(p, q);
             cylinder.transform.parent = this.transform;
             cylinder.GetComponent<Renderer>().material.color = Color.yellow;
-            cylinder.AddComponent<Light>();
+            cylinder.AddComponent<TrafficLight>();
             elements.Add(cylinder);
         }
     }

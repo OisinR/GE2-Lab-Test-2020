@@ -6,14 +6,14 @@ public class State
 {
 
     protected FiniteStateMachine stateMachine;
-    protected Entity entity;
+    protected Light light;
 
     protected float startTime;
 
 
-    public State(Entity entity, FiniteStateMachine stateMachine)
+    public State(Light light, FiniteStateMachine stateMachine)
     {
-        this.entity = entity;
+        this.light = light;
         this.stateMachine = stateMachine;
 
     }
