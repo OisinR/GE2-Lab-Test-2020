@@ -16,7 +16,7 @@ public class FindGreenLights : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerStay(Collider collision)
     {
        
         if (!TouchingObjects.Contains(collision.gameObject))
@@ -34,7 +34,12 @@ public class FindGreenLights : MonoBehaviour
     {
         if(seekScript.targetGameObject== null || seekScript.targetGameObject.layer == 0)
         {
-            seekScript.targetGameObject = TouchingObjects[Random.Range(0,TouchingObjects.Count)];
+            if(TouchingObjects.Count == 0)
+            {
+                return; //dont throw an error, just wait for one to turn up
+            }
+
+            seekScript.targetGameObject = TouchingObjects[Random.Range(0,TouchingObjects.Count - 1)];
         }
 
         distanceToTarget = Vector3.Distance(transform.position, seekScript.targetGameObject.transform.position);
